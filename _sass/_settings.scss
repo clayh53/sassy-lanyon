@@ -1,0 +1,14 @@
+/* This file contains all the variables for colors and font styles */
+
+// Note: Only system fonts are being used for this theme - but use whatever you want
+$body-font:   BlinkMacSystemFont, -apple-system,"Segoe UI",Roboto,Helvetica, Arial, sans-serif;
+$header-font:  BlinkMacSystemFont, -apple-system,"Segoe UI",Roboto,Helvetica, Arial, sans-serif;
+$code-font: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier","Courier New",monospace !important;
+$url-font: BlinkMacSystemFont, -apple-system,"Segoe UI",Roboto,Helvetica, Arial, sans-serif;
+//Colors 
+$text-color: #353535; //Primary text color
+$bg-color: #fcfcfc; // Primary background color
+$contrast-color: rgba(170, 5, 8, 1.0); //Primary contrast color for sidebar and link text
+$border-color: #333333;
+$alert-color: rgba(255, 255, 230, 1);
+

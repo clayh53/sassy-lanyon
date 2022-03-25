@@ -1,0 +1,42 @@
+/* Table styling - booktabs style*/
+
+
+table { width: auto;  //making booktabs style tables the unstyled default in case someone uses Markdown styling
+                 //margin: 0 auto;
+                 border-spacing: 0px;
+                 border-top: 2px solid $text-color;
+                 border-bottom: 2px solid #313131;
+                 margin: 1.5rem 0rem; 
+         }
+
+th { border-bottom: 1px solid $text-color;
+               padding: 0.65ex 0.5em 0.55ex 0.5em;
+               font-weight: normal;
+               //text-align: center; 
+               }
+
+th{ font-size: 1rem;
+        line-height: 1.3;  }
+td{ font-size: 0.8rem;
+        line-height: 1.2; }
+
+th { border-bottom: 1px solid $text-color; }
+
+th.nocmid { border-bottom: none; }
+
+tr:first-child td { padding-top: .35rem; } /* add space between thead row and tbody */
+tr:last-child td {padding-bottom: .35rem;}
+
+
+
+td {  padding-left: 0.5em;
+                    padding-right: 0.5em;
+                    text-align: left; }            
+
+caption { font-size: 90%;
+                    text-align: left;
+                    width: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 1ex;
+                    caption-side: top; }

@@ -1,0 +1,360 @@
+/* Basic typography settings */
+
+// Global Resets
+//
+* { margin: 0; padding: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: $text-color;
+  letter-spacing: 0.03rem;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  color: $text-color;
+  background-color: $bg-color;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+/* -- styling for details and summary elements */
+details summary::-webkit-details-marker {
+  font-size: 1.25rem;
+  color: $contrast-color;
+  
+}
+details.listing:first-of-type{
+  border-top: 2px dotted lighten($border-color,40%);
+  margin-top:1.5rem;
+  padding-top: 0.75rem;
+}
+details.listing:last-of-type{
+  border-bottom: 2px dotted lighten($border-color,40%);
+  margin-bottom:1.5rem;
+  padding-bottom: 1rem;
+}
+details.listing span.listing a{
+  line-height:2;
+}
+summary span.title{
+  display:inline-block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  margin-bottom:0.25rem;
+
+}
+/*--- Tag Cloud --*/
+.site-tag a {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/* -- Some utility classes to reverse things --*/
+
+.reverse{
+  color: $bg-color;
+  background-color: $text-color;
+}
+
+.contrast-reverse{
+  color: $bg-color;
+  background-color: $contrast-color;
+}
+.darken{
+  background-color: darken($bg-color,2%);
+}
+
+strong, b{
+  font-weight:500;
+}
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: $contrast-color;
+  text-decoration: none;
+}
+a strong {
+  color: inherit;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6, thead {
+  font-family: $header-font;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  margin-bottom: .5rem;
+  line-height: 1.35;
+  text-rendering: optimizeLegibility;
+}
+
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong, b {
+  color: darken($text-color,1%);
+}
+
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+/* == Fancy stuff to make ordered lists number properly == */
+ol {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 0 2em; /* Give each list item a left margin to make room for the numbers */
+    list-style:none; /* Disable the normal item numbering */
+}
+ol > li:before {
+    content:counter(li)"."; /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+}
+//li ol{margin-top:6px;}
+//
+ol ol li:last-child {margin-bottom:0;}
+
+/*== End of ordered list trickery ==*/
+/*== Use basic ordered list stuff above to make a class 
+for table of contents with smaller fonts and appropriate
+vertical rhythm ==*/
+
+ul{
+	margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+p ~ ul > li{
+	position:relative; /* Create a positioning context */
+    margin:0 0 0 1em; /* Give each list item a left margin to make room for the symbol */
+    list-style:disc;
+}
+/*-- definition title and data used for tightly space lists --*/
+
+dt {
+  font-weight: 400;
+}
+dd {
+  margin-bottom: .5rem;
+}
+dt.title{
+  font-size:1.25rem;
+  text-transform: capitalize;
+  border-bottom: 1px dashed $border-color;
+  padding-bottom:.25rem;
+  margin-bottom: .5rem;
+  margin-top:1rem;
+}
+
+/* Misc */
+.newthought { 
+  font-variant: small-caps;
+  font-size: 1.2em;
+  letter-spacing: 0.05rem; 
+}
+
+footnote{
+  
+}
+
+sup {
+vertical-align: super;
+font-size: smaller;
+margin-left:-0.05rem;
+}
+/*
+sup[id^='fnref:'] a{
+  color: green !important;
+}
+*/
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid lighten($border-color,25%);
+  border-bottom: 1px solid #fff;
+}
+
+hr.slender {
+    border: 0;
+    height: 1px;
+    margin-left:-5%;
+    width: 110%;
+    margin-top: 1.5rem;
+    margin-bottom:1.5rem;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+
+abbr {
+  font-size: 85%;
+  font-weight: 400;
+  color: darken($text-color,20%);
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted lighten($border-color,25%);
+}
+
+/* Code */
+code,
+pre {
+  font-family: $code-font;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: lighten($text-color,20%);
+  background-color: darken($bg-color,3%);
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  //white-space: pre-wrap;
+  //word-break: break-all;
+  //word-wrap: break-word;
+  
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+  overflow-x:auto;
+}
+
+
+
+/* Pygments via Jekyll */
+.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+  background-color: darken($bg-color,3%);
+
+}
+
+/* Gist via GitHub Pages */
+.gist .gist-file {
+  font-family: $code-font;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Quotes */
+blockquote {
+  padding: .5rem 1rem;
+  margin: 0.8rem 0;
+  margin-left: 1rem;
+  color: lighten($text-color,20%);
+  font-style: italic;
+}
+
+blockquote{
+	  border-left: .15rem solid lighten($border-color,60%);
+}
+
+blockquote blockquote{
+	border:none;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1 1 1rem;
+  border-radius: 5px;
+}

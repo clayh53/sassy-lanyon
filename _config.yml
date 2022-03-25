@@ -1,0 +1,32 @@
+# Setup
+title:               Sassy-Lanyon
+tagline:             'A SASS-friendly gem-based theme'
+description:         "gem-based version of Mark Otto's Lanyon theme"
+url:                 http://lanyon.getpoole.com
+baseurl:             ''
+paginate:            2
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Mark Otto with an assist by Clay Harmon
+  url:               https://bit.bucket.com
+  email:             no@email.com
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'

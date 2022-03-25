@@ -1,0 +1,26 @@
+/*---Styling for figure, video and figcaption elements ---*/
+
+
+figure, video, iframe{
+  display:block;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+}
+video{
+  margin-bottom:1rem;
+}
+figcaption{
+  display:block;
+  padding-top:1rem;
+  text-align:center;
+  font-weight:400;
+}
+figure img{
+  margin-left: auto;
+  margin-right: auto;
+}

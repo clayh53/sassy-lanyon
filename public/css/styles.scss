@@ -1,0 +1,20 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main scss files contain this front matter, not partials.
+---
+/*****************************************************************************/
+/*
+/* Lanyon fork (Lork?)
+/* Based on Lanyon Copyright (c) 2014 Mark Otto under MIT license
+/* This version is also under the MIT license
+/*****************************************************************************/
+
+// Imports to create final css file
+
+@import "../_sass/settings";
+@import "../_sass/syntax";
+@import "../_sass/typography";
+@import "../_sass/layout";
+@import "../_sass/sidebar";
+@import "../_sass/image-and-media";
+@import "../_sass/tables";
