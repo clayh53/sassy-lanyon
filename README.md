@@ -13,3 +13,5 @@ Other than than that, all of the original goodness of the theme is the same.
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+Since this is a forked version, do with it what you will as long as you respect the license on the original Lanyon theme.
+
